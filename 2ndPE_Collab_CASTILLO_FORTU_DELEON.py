@@ -43,4 +43,15 @@ print("Total Amount: PHP {:.2f}".format(sum(item[3] for item in products)))
 print("================================================================")
 print("Thank you for your purchase! We hope to see you again soon.")
 print("================================================================")
+print("------------------------------")
+print("receipt")
+print("products ordered:")
+print("product name | quantity | price | subtotal")
+for product in products:
+    print(f" - {product[0]} x{product[1]} @ PHP {product[2]:.2f} = PHP {product[3]:.2f}")
+    print("total: PHP {:.2f}".format(sum(item[3] for item in products)))
+    print("------------------------------")
+    print("Thank you for your purchase!")
+    print("------------------------------")
+
 
