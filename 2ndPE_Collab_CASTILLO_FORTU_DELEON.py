@@ -29,6 +29,20 @@ while ask == "y":
     ask = input("Do you want to add another product? (y/n): ")
     subtotal = price * quantity
     products.append((product_name, quantity, price, subtotal))
+    
+print("==============================")
+print("ORDER RECEIPT")
+print("==============================")
+
+print("Products ordered:")
+print("Product Name | Quantity | Price | Subtotal")
+
+for product in products:
+    print(f" - {product[0]} --- x{product[1]} --- PHP {product[2]:.2f} = PHP {product[3]:.2f}")
+print("Total Amount: PHP {:.2f}".format(sum(item[3] for item in products)))
+print("================================================================")
+print("Thank you for your purchase! We hope to see you again soon.")
+print("================================================================")
 print("------------------------------")
 print("receipt")
 print("products ordered:")
